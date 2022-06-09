@@ -1,0 +1,58 @@
+Private Sub Command1_Click()
+List1.AddItem Text1.Text
+List1.AddItem Text2.Text
+If Option1.Value = True Then
+gender = "male"
+End If
+If Option2.Value = True Then
+gender = "female"
+End If
+List1.AddItem gender
+List1.AddItem Text3.Text
+If Check1.Value = 1 And Check2.Value = 0 Then
+area = "software Engineering"
+End If
+If Check1.Value = 1 And Check2.Value = 1 Then
+area = "software Engineering & Networks"
+End If
+If Check1.Value = 0 And Check2.Value = 1 Then
+area = " Networks"
+End If
+List1.AddItem area
+List1.AddItem Text4.Text
+End Sub
+Private Sub Command2_Click()
+If List1.ListIndex <> 0 Then
+List1.RemoveItem (0)
+End If
+End Sub
+Private Sub Command3_Click()
+End
+End Sub
+
+Form Design 2
+EXECUTION
+Form1
+Private Sub Command1_Click()
+Dim a As Integer
+a = Val(Text1.Text) + Val(Text2.Text)
+MsgBox ("Addition of Two numbers is" + Str(a))
+End Sub
+Private Sub Command2_Click()
+Dim b As Integer
+b = Val(Text1.Text) - Val(Text2.Text)
+MsgBox ("Subraction of Two numbers is" + Str(b))
+End Sub
+Private Sub Command3_Click()
+Dim c As Integer
+c = Val(Text1.Text) * Val(Text2.Text)
+MsgBox ("Multiplication of Two numbers is" + Str(c))
+End Sub
+Private Sub Command4_Click()
+Dim d As Integer
+d = Val(Text1.Text) / Val(Text2.Text)
+MsgBox ("Division of Two numbers is" + Str(d))
+End Sub
+Private Sub Command5_Click()
+End
+End Sub
